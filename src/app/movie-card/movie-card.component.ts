@@ -7,7 +7,9 @@ import { FetchApiDataService } from '../fetch-api-data.service'
   styleUrls: ['./movie-card.component.scss']
 })
 export class MovieCardComponent {
+
   movies: any[] = [];
+  
   constructor(public fetchApiData: FetchApiDataService) { }
 
 ngOnInit(): void {
