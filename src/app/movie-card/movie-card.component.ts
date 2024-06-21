@@ -21,7 +21,9 @@ export class MovieCardComponent implements OnInit {
     public snackBar: MatSnackBar
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getMovies()
+  }
 
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
