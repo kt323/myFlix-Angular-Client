@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-
+import { GenreComponent } from '../genre/genre.component';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -71,13 +71,13 @@ export class MovieCardComponent implements OnInit {
    * @returns Genre name and discription.
    */
   openGenreDialog(name: string, description: string): void {
-    // this.dialog.open(GenreInfoComponent, {
-    //   data: {
-    //     Name: name,
-    //     Description: description,
-    //   },
-    //   width: '450px',
-    // });
+    this.dialog.open(GenreComponent, {
+      data: {
+        Name: name,
+        Description: description,
+      },
+      width: '450px',
+    });
     alert(`Genre: ${name} \n Description: ${description}`);
   }
 
