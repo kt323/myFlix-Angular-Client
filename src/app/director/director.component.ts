@@ -2,19 +2,19 @@ import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog'
 
 @Component({
-  selector: 'app-genre',
+  selector: 'app-director',
   standalone: true,
   imports: [],
-  templateUrl: './genre.component.html',
-  styleUrl: './genre.component.scss'
+  templateUrl: './director.component.html',
+  styleUrl: './director.component.scss'
 })
-export class GenreComponent {
+export class DirectorComponent {
   constructor(
     @Inject(MAT_DIALOG_DATA)  
     public data: { 
     Name: string; 
-    Description: string;
+    Bio: string;
+    Birth: string
     }
   ){}
-  
 }
